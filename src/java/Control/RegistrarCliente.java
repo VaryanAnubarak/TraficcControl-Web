@@ -8,6 +8,8 @@ package Control;
 import Modelo.Cliente;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -34,28 +36,27 @@ public class RegistrarCliente extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-            String nombre = request.getParameter("nombre");
-            String identificacion = request.getParameter("identificacion");
-            String fechaEntradaPeaje = request.getParameter("fechaEntradaPeaje");
-            String horaEntradaPeaje = request.getParameter("horaEntradaPeaje");
-            String tipoPagoStr = request.getParameter("tipoPago");
-            int tipoPago = 0;
-            if(tipoPagoStr != "" && !tipoPagoStr.equalsIgnoreCase(null)){
-                tipoPago = Integer.parseInt(tipoPagoStr);
-            }
-            String pagoPeaje = request.getParameter("pagoPeaje");
-            String matricula = request.getParameter("matricula");
-            String tipoVehiculo = request.getParameter("tipoVehiculo");
-            Cliente cliente = new Cliente(hashCode() ,nombre, identificacion, fechaEntradaPeaje, horaEntradaPeaje, tipoPago, pagoPeaje, matricula, tipoVehiculo);
-            EntityManagerFactory emf=Persistence.createEntityManagerFactory("TrafficControl-WebPU");
-        EntityManager em=emf.createEntityManager();
-        
-        em.getTransaction().begin();
-        em.persist(cliente);
-        em.flush();
-        em.getTransaction().commit();
-        
-        response.sendRedirect("index.jsp");
+        String nombre = request.getParameter("nombre");
+        String identificacion = request.getParameter("identificacion");
+        String tipoPagoStr = request.getParameter("tipoPago");
+        int tipoPago = 0;
+        if (tipoPagoStr != "" && !tipoPagoStr.equalsIgnoreCase(null)) {
+            tipoPago = Integer.parseInt(tipoPagoStr);
+        }
+        String matricula = request.getParameter("matricula");
+        String tipoVehiculo = request.getParameter("tipoVehiculo");
+            Cliente cliente = new Cliente(hashCode(), nombre, identificacion, LocalDate.now().toString(), LocalTime.now().toString(), tipoPago, Integer.toString(3343), matricula, tipoVehiculo);
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("TrafficControl-WebPU");
+            EntityManager em = emf.createEntityManager();
+
+            em.getTransaction().begin();
+            em.persist(cliente);
+            em.flush();
+            em.getTransaction().commit();
+
+            response.sendRedirect("registroVehiculos.html");
+       
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

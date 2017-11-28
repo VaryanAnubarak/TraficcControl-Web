@@ -138,37 +138,60 @@
 
                                 <h2 class="section-heading text-uppercase">Registrate ya !!</h2>
                                 <form action="RegistrarCliente" method="post">
-                                    <div class="col-md-12 ">
 
-                                        <div class="form-group">
-                                            Nombre:  
-                                            <input type="text"  name="nombre" />
-                                        </div>
-                                        Identificacion: 
-                                        <div class="form-group">
-                                            <input type="text"  name="identificacion"/><br />
-                                        </div>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Nombre: 
+                                            </td>
+                                            <td>
+                                                <input type="text"  name="nombre" /><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Identificacion: 
+                                            </td>
+                                            <td>
+                                                <input type="text"  name="identificacion"/><br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Tipo Pago: 
+                                            </td>
+                                            <td>
+                                                <input type="radio" name="tipoPago" value="1" checked/>Efectivo<br />
+                                                <input type="radio" name="tipoPago" value="2"/>FlyPass<br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Matricula:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="matricula"/><br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Tipo de vehiculo:
+                                            </td>
+                                            <td>
+                                                  <select name="tipoVehiculo">
+                                                    <option value="1">Clase 1</option> 
+                                                    <option value="2">Clase 2</option> 
+                                                    <option value="3">Clase 3</option>
+                                                    <option value="4">Clase 4</option> 
+                                                    <option value="5">Clase 5</option> 
+                                                    <option value="6">Clase 6</option>
+                                                    <option value="7">Clase 7</option> 
+                                                </select><br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                                        <div class="form-group">
-                                            <input type="text" name="fechaEntradaPeaje"/><br />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="horaEntradaPeaje"/><br />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="tipoPago"/><br />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="pagoPeaje"/><br />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="matricula"/><br />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="tipoVehiculo"/><br />
-                                        </div>
-
-                                    
                                     <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar Registro</button>
 
                                 </form>
