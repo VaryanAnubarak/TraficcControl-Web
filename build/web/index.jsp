@@ -1,4 +1,11 @@
+<%-- 
+    Document   : lista
+    Created on : Nov 27, 2017, 12:22:57 PM
+    Author     : daniel.riveraa
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -81,7 +88,7 @@
 								<li>
 									<a class="active" href="index.html">Home</a>
 								</li>
-								<li><a href="work.html">Projects</a></li>
+								<li><a href="registroVehiculos.html">Registrar Vehiculo</a></li>
 								<li>
 									<a href="services.html" class="fh5co-sub-ddown">Services</a>
 									 <ul class="fh5co-sub-menu">
