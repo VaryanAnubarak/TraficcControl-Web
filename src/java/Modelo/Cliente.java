@@ -7,13 +7,13 @@ package Modelo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -37,6 +37,7 @@ public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idCliente")
     private Integer idCliente;
@@ -58,8 +59,6 @@ public class Cliente implements Serializable {
     @Basic(optional = false)
     @Column(name = "pagoPeaje")
     private String pagoPeaje;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "cliente")
-    private Vehiculo vehiculo;
 
     public Cliente() {
     }
@@ -68,7 +67,7 @@ public class Cliente implements Serializable {
         this.idCliente = idCliente;
     }
 
-    public Cliente(Integer idCliente, String nombre, String identificacion, String fechaEntradaPeaje, String horaEntradaPeaje, int tipoPago, String pagoPeaje, String matricula, String tipoVehiculo) {
+    public Cliente(Integer idCliente, String nombre, String identificacion, String fechaEntradaPeaje, String horaEntradaPeaje, int tipoPago, String pagoPeaje) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -76,8 +75,6 @@ public class Cliente implements Serializable {
         this.horaEntradaPeaje = horaEntradaPeaje;
         this.tipoPago = tipoPago;
         this.pagoPeaje = pagoPeaje;
-        this.vehiculo = new Vehiculo(idCliente, matricula, tipoVehiculo);
-        
     }
 
     public Integer getIdCliente() {
@@ -134,14 +131,6 @@ public class Cliente implements Serializable {
 
     public void setPagoPeaje(String pagoPeaje) {
         this.pagoPeaje = pagoPeaje;
-    }
-
-    public Vehiculo getVehiculo() {
-        return vehiculo;
-    }
-
-    public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
     }
 
     @Override
