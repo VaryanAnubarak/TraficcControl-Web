@@ -1,11 +1,4 @@
-<%-- 
-    Document   : lista
-    Created on : Nov 27, 2017, 12:22:57 PM
-    Author     : daniel.riveraa
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -86,32 +79,10 @@
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
-									<a class="active" href="index.html">Home</a>
+									<a href="index.html">Home</a>
 								</li>
-								<li><a href="registroVehiculos.html">Registrar Vehiculo</a></li>
-								<li>
-									<a href="services.html" class="fh5co-sub-ddown">Services</a>
-									 <ul class="fh5co-sub-menu">
-									 	<li><a href="left-sidebar.html">Web Development</a></li>
-									 	<li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Free HTML5</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-												<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-											</ul>
-										</li>
-										<li><a href="#">UI Animation</a></li>
-										<li><a href="#">Copywriting</a></li>
-										<li><a href="#">Photography</a></li> 
-									</ul>
-								</li>
+								<li><a href="registroVehiculos.html">Registre un vehiculo</a></li>			
 								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -122,41 +93,13 @@
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/slide_1.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<h2>We shape our buildings; thereafter they shape Us.</h2>
-			   						<p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
 			   	<li style="background-image: url(images/slide_2.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
-			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<h2>Architecture is a visual art, and the buildings speak for themselves.</h2>
-			   						<p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/slide_3.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<h2>Architecture begins where engineering ends.</h2>
-			   						<p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
-			   					</div>
+			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+			   				<div class="slider-text-inner desc">
+			   					<h2 class="heading-section">Our Services</h2>
+			   					<p class="fh5co-lead">Designed with <i class="icon-heart3"></i> by the fine folks at <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -164,30 +107,52 @@
 			  	</ul>
 		  	</div>
 		</aside>
-		<div id="fh5co-section">
-			<div class="grid-project-section">
-				<a href="#">
-					<img src="images/project-1.jpg" alt="Project" class="img-responsive">
-					<div class="desc text-center">
-						<h2>Ohio Building</h2>
+		<div id="fh5co-services-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="services-inner text-center">
+							<img src="images/b-engineer.svg" alt="blueprint">
+							<h3>Licensure Engineer</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+						</div>
 					</div>
-				</a>
-			</div>
-			<div class="grid-project-section">
-				<a href="#">
-					<img src="images/project-2.jpg" alt="Project" class="img-responsive">
-					<div class="desc text-center">
-						<h2>Bridge of London</h2>
+					<div class="col-md-4 text-center">
+						<div class="services-inner">
+							<img src="images/b-compass.svg" alt="blueprint">
+							<h3>Architect</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+						</div>
 					</div>
-				</a>
-			</div>
-			<div class="grid-project-section">
-				<a href="#">
-					<img src="images/project-3.jpg" alt="Project" class="img-responsive">
-					<div class="desc text-center">
-						<h2>New York City</h2>
+					<div class="col-md-4 text-center">
+						<div class="services-inner">
+							<img src="images/b-blueprint.svg" alt="blueprint">
+							<h3>We Create Blueprint</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+						</div>
 					</div>
-				</a>
+					<div class="col-md-4 text-center">
+						<div class="services-inner">
+							<img src="images/b-hammer.svg" alt="blueprint">
+							<h3>We Build House</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="services-inner">
+							<img src="images/b-hotel.svg" alt="blueprint">
+							<h3>Building Project</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="services-inner">
+							<img src="images/b-tractor.svg" alt="blueprint">
+							<h3>We Move Properties</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<footer>
@@ -227,7 +192,7 @@
 							<form class="contact-form">
 								<div class="form-group">
 									<label for="name" class="sr-only">Name</label>
-									<input type="name" class="form-control" id="name" placeholder="Name">
+
 								</div>
 								<div class="form-group">
 									<label for="email" class="sr-only">Email</label>
@@ -252,7 +217,7 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>&copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
+							<p>&copy;  2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
 						</div>
 					</div>
 				</div>

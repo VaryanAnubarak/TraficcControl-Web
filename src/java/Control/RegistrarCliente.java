@@ -45,7 +45,8 @@ public class RegistrarCliente extends HttpServlet {
         }
         String matricula = request.getParameter("matricula");
         String tipoVehiculo = request.getParameter("tipoVehiculo");
-            Cliente cliente = new Cliente(hashCode(), nombre, identificacion, LocalDate.now().toString(), LocalTime.now().toString(), tipoPago, Integer.toString(3343), matricula, tipoVehiculo);
+            Cliente cliente = new Cliente(1, nombre, identificacion, LocalDate.now().toString(), LocalTime.now().toString(), tipoPago, Integer.toString(3343), matricula, tipoVehiculo);
+            cliente.setIdCliente(hashCode());
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("TrafficControl-WebPU");
             EntityManager em = emf.createEntityManager();
 
