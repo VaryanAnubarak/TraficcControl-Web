@@ -9,11 +9,11 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -33,6 +33,7 @@ public class Vehiculo implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idVehiculo")
     private Integer idVehiculo;
@@ -42,9 +43,6 @@ public class Vehiculo implements Serializable {
     @Basic(optional = false)
     @Column(name = "tipoVehiculo")
     private String tipoVehiculo;
-    @JoinColumn(name = "idVehiculo", referencedColumnName = "idCliente", insertable = false, updatable = false)
-    @OneToOne(optional = false)
-    private Cliente cliente;
 
     public Vehiculo() {
     }
@@ -81,14 +79,6 @@ public class Vehiculo implements Serializable {
 
     public void setTipoVehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
     }
 
     @Override

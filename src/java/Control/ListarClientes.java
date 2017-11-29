@@ -1,20 +1,21 @@
+package Control;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Control;
+
 
 import Modelo.Cliente;
-import Modelo.Vehiculo;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +24,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jairo
  */
-public class RegistrarCliente extends HttpServlet {
+@WebServlet(name = "ListarClientes", urlPatterns = {"/lista"})
+public class ListarClientes extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,33 +39,27 @@ public class RegistrarCliente extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String nombre = request.getParameter("nombre");
-        String identificacion = request.getParameter("identificacion");
-        String tipoPagoStr = request.getParameter("tipoPago");
-        int tipoPago = 0;
-        if (tipoPagoStr != "" && !tipoPagoStr.equalsIgnoreCase(null)) {
-            tipoPago = Integer.parseInt(tipoPagoStr);
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            List<Cliente> clientes = getAll();
+            request.setAttribute("clientes", clientes);
+            request.getRequestDispatcher("lista.jsp").forward(request, response);
         }
-        String matricula = request.getParameter("matricula");
-        String tipoVehiculo = request.getParameter("tipoVehiculo");
-            Cliente cliente = new Cliente(0,nombre, identificacion, LocalDate.now().toString(), LocalTime.now().toString(), tipoPago, Integer.toString(3343));
-            Vehiculo vehiculo = new Vehiculo(0, matricula, tipoVehiculo);
-            cliente.setIdCliente(0);
-            EntityManagerFactory emf = Persistence.createEntityManagerFactory("TrafficControl-WebPU");
-            EntityManager em = emf.createEntityManager();
-
-            em.getTransaction().begin();
-
-
-            em.persist(vehiculo);
-            em.persist(cliente);
-            em.flush();
-            em.getTransaction().commit();
-
-            response.sendRedirect("registroVehiculos.html");
-       
-
     }
+    private List<Cliente> getAll()
+    {
+        EntityManager em;
+        EntityManagerFactory emf;
+        emf=Persistence.createEntityManagerFactory("WebsitoPU");
+        em=emf.createEntityManager();
+        em.getTransaction().begin();
+        List<Cliente> clientes=em.createNamedQuery("Cliente.findAll").getResultList();
+        em.getTransaction().commit();
+        em.close();
+        return clientes;
+    
+    }
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

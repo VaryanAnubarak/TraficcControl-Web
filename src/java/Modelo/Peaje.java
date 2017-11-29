@@ -41,7 +41,7 @@ public class Peaje {
     }
 
     public double getPrecio(Vehiculo vehiculo) {
-        int clase = Integer.parseInt(vehiculo.getClaseVehiculo());
+        int clase = Integer.parseInt(vehiculo.getTipoVehiculo());
         switch (clase) {
             case 1:
                 return precio1;
