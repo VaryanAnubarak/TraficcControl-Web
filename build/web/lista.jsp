@@ -12,8 +12,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Traffic Control</title>
+
+
         <!-- 
               //////////////////////////////////////////////////////
       
@@ -84,7 +86,7 @@
                                         </li>
                                         <li><a href="registroVehiculos.html">Registrar Vehiculo</a></li>
 
-                                        <li><a class="active" href="lista.jsp">Listar Vehiculos</a></li>
+                                        <li><a class="active" href="lista.jsp">Mostrar Listado de Vehiculos</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -100,7 +102,8 @@
                                 <div class="container">
                                     <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
                                         <div class="slider-text-inner desc">
-                                            <h2 class="heading-section">Listado de Vehiculos</h2>
+                                            <h2 class="heading-section">Lista de Vehiculos</h2>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +142,6 @@
 </table>
                 </div>
                 
-
 
             </div>
             <!-- END fh5co-page -->

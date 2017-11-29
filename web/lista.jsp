@@ -13,11 +13,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Beam &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-        <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-        <meta name="author" content="FREEHTML5.CO" />
+        <title>Traffic Control</title>
+
 
         <!-- 
               //////////////////////////////////////////////////////
@@ -87,10 +84,9 @@
                                         <li>
                                             <a href="index.html">Home</a>
                                         </li>
-                                        <li><a href="Registro de Vehiculos.html">Projects</a></li>
+                                        <li><a href="registroVehiculos.html">Projects</a></li>
 
-                                        <li><a class="active" href="about.html">About</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a class="active" href="lista.jsp">Mostrar Listado de Vehiculos</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -106,8 +102,8 @@
                                 <div class="container">
                                     <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
                                         <div class="slider-text-inner desc">
-                                            <h2 class="heading-section">About Us</h2>
-                                            <p class="fh5co-lead">Designed with <i class="icon-heart3"></i> by the fine folks at <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
+                                            <h2 class="heading-section">Lista de Vehiculos</h2>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -145,75 +141,7 @@
     </center>
 </table>
                 </div>
-                <footer>
-                    <div id="footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <h3 class="section-title">About Us</h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <h3 class="section-title">Our Services</h3>
-                                    <ul>
-                                        <li><a href="#">Web Design</a></li>
-                                        <li><a href="#">Branding &amp; Identity</a></li>
-                                        <li><a href="#">Free HTML5</a></li>
-                                        <li><a href="#">HandCrafted Templates</a></li>
-                                        <li><a href="#">Free Bootstrap Template</a></li>
-                                        <li><a href="#">Free HTML5 Template</a></li>
-                                        <li><a href="#">Free HTML5 &amp; CSS3 Template</a></li>
-                                        <li><a href="#">HandCrafted Templates</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <h3 class="section-title">Our Address</h3>
-                                    <ul class="contact-info">
-                                        <li><i class="icon-map2"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-                                        <li><i class="icon-phone2"></i>+ 1235 2355 98</li>
-                                        <li><i class="icon-envelope2"></i><a href="#">info@yoursite.com</a></li>
-                                        <li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3">
-                                    <h3 class="section-title">Drop us a line</h3>
-                                    <form class="contact-form">
-                                        <div class="form-group">
-                                            <label for="name" class="sr-only">Name</label>
-                                            <input type="name" class="form-control" id="name" placeholder="Name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email" class="sr-only">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message" class="sr-only">Message</label>
-                                            <textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row copy-right">
-                                <div class="col-md-6 col-md-offset-3 text-center">
-                                    <p class="fh5co-social-icons">
-                                        <a href="#"><i class="icon-twitter2"></i></a>
-                                        <a href="#"><i class="icon-facebook2"></i></a>
-                                        <a href="#"><i class="icon-instagram"></i></a>
-                                        <a href="#"><i class="icon-dribbble2"></i></a>
-                                        <a href="#"><i class="icon-youtube"></i></a>
-                                    </p>
-                                    <p>&copy; 2016 Free Html5 <a href="#">Beam</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash </a>,<a href="https://pexels.com/" target="_blank"> Pexels</a> <br> Colored Icons: <a href="http://flaticon.com" target="_blank">Flaticon</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-
+                
 
             </div>
             <!-- END fh5co-page -->
