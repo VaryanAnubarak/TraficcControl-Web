@@ -1,4 +1,11 @@
+<%-- 
+    Document   : lista
+    Created on : Nov 27, 2017, 12:22:57 PM
+    Author     : daniel.riveraa
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -79,9 +86,9 @@
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a class="active" href="index.html">Home</a>
 								</li>
-								<li><a class="active" href="work.html">Projects</a></li>
+								<li><a href="registroVehiculos.html">Registrar Vehiculo</a></li>
 								<li>
 									<a href="services.html" class="fh5co-sub-ddown">Services</a>
 									 <ul class="fh5co-sub-menu">
@@ -118,10 +125,38 @@
 			   	<li style="background-image: url(images/slide_1.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
-			   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-			   				<div class="slider-text-inner desc">
-			   					<h2 class="heading-section">Our Awesome Projects</h2>
-			   					<p class="fh5co-lead">Designed with <i class="icon-heart3"></i> by the fine folks at <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
+			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
+			   				<div class="slider-text-inner">
+			   					<div class="desc">
+			   						<h2>We shape our buildings; thereafter they shape Us.</h2>
+			   						<p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
+			   					</div>
+			   				</div>
+			   			</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/slide_2.jpg);">
+			   		<div class="overlay-gradient"></div>
+			   		<div class="container">
+			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
+			   				<div class="slider-text-inner">
+			   					<div class="desc">
+			   						<h2>Architecture is a visual art, and the buildings speak for themselves.</h2>
+			   						<p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
+			   					</div>
+			   				</div>
+			   			</div>
+			   		</div>
+			   	</li>
+			   	<li style="background-image: url(images/slide_3.jpg);">
+			   		<div class="overlay-gradient"></div>
+			   		<div class="container">
+			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
+			   				<div class="slider-text-inner">
+			   					<div class="desc">
+			   						<h2>Architecture begins where engineering ends.</h2>
+			   						<p><a href="#" class="btn btn-primary btn-outline">View Details</a></p>
+			   					</div>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -129,64 +164,30 @@
 			  	</ul>
 		  	</div>
 		</aside>
-		<div id="fh5co-work-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-1.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
+		<div id="fh5co-section">
+			<div class="grid-project-section">
+				<a href="#">
+					<img src="images/project-1.jpg" alt="Project" class="img-responsive">
+					<div class="desc text-center">
+						<h2>Ohio Building</h2>
 					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-2.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
+				</a>
+			</div>
+			<div class="grid-project-section">
+				<a href="#">
+					<img src="images/project-2.jpg" alt="Project" class="img-responsive">
+					<div class="desc text-center">
+						<h2>Bridge of London</h2>
 					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-3.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
+				</a>
+			</div>
+			<div class="grid-project-section">
+				<a href="#">
+					<img src="images/project-3.jpg" alt="Project" class="img-responsive">
+					<div class="desc text-center">
+						<h2>New York City</h2>
 					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-4.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-5.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center project">
-						<a href="#" class="grid-project">
-							<div class="image"><img src="images/project-6.jpg" alt="Project" class="img-responsive"></div>
-							<div class="desc">
-								<h3>Ohio Building</h3>
-								<span>Architecture</span>
-							</div>
-						</a>
-					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 		<footer>
@@ -219,7 +220,7 @@
 								<li><i class="icon-phone2"></i>+ 1235 2355 98</li>
 								<li><i class="icon-envelope2"></i><a href="#">info@yoursite.com</a></li>
 								<li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
-							</ul>	
+							</ul>
 						</div>
 						<div class="col-md-3">
 							<h3 class="section-title">Drop us a line</h3>
