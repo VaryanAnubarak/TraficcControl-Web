@@ -15,6 +15,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -42,21 +44,33 @@ public class Cliente implements Serializable {
     @Column(name = "idCliente")
     private Integer idCliente;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
     @Column(name = "nombre")
     private String nombre;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
     @Column(name = "identificacion")
     private String identificacion;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
     @Column(name = "fechaEntradaPeaje")
     private String fechaEntradaPeaje;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
     @Column(name = "horaEntradaPeaje")
     private String horaEntradaPeaje;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2)
     @Column(name = "tipoPago")
-    private int tipoPago;
+    private String tipoPago;
     @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
     @Column(name = "pagoPeaje")
     private String pagoPeaje;
 
@@ -67,7 +81,7 @@ public class Cliente implements Serializable {
         this.idCliente = idCliente;
     }
 
-    public Cliente(Integer idCliente, String nombre, String identificacion, String fechaEntradaPeaje, String horaEntradaPeaje, int tipoPago, String pagoPeaje) {
+    public Cliente(Integer idCliente, String nombre, String identificacion, String fechaEntradaPeaje, String horaEntradaPeaje, String tipoPago, String pagoPeaje) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -117,11 +131,11 @@ public class Cliente implements Serializable {
         this.horaEntradaPeaje = horaEntradaPeaje;
     }
 
-    public int getTipoPago() {
+    public String getTipoPago() {
         return tipoPago;
     }
 
-    public void setTipoPago(int tipoPago) {
+    public void setTipoPago(String tipoPago) {
         this.tipoPago = tipoPago;
     }
 

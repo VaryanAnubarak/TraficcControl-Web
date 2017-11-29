@@ -1,8 +1,12 @@
 <%-- 
     Document   : lista
     Created on : Nov 27, 2017, 12:22:57 PM
-    Author     : daniel.riveraa
+    Author     : Jairo.Campana
 --%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 
 
 <!DOCTYPE html>
@@ -86,7 +90,7 @@
                                         </li>
                                         <li><a href="registroVehiculos.html">Projects</a></li>
 
-                                        <li><a class="active" href="lista.jsp">Mostrar Listado de Vehiculos</a></li>
+                                        <li><a class="active" href="ListaDB">Mostrar Listado de Vehiculos</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -103,7 +107,7 @@
                                     <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
                                         <div class="slider-text-inner desc">
                                             <h2 class="heading-section">Lista de Vehiculos</h2>
-                                           
+
                                         </div>
                                     </div>
                                 </div>
@@ -112,36 +116,50 @@
                     </div>
                 </aside>
                 <div id="fh5co-team-section">
-                        <table>
-    <center>
-        <h2 class="section-heading text-uppercase">Lista</h2>
-    <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Identificacion</th>
-        <th scope="col">Tipo de pago</th>
-        <th scope="col">Pago Peaje</th>
-        <th scope="col">Matricula</th>
-        <th scope="col">Tipo de Vehiculo</th>
-        <th scope="col">Fecha Ingreso Peaje</th>
-        <th scope="col">Hora Ingreso Peaje</th>
-        
-    </tr>
-    <c:forEach items="${clientes}" var="cliente">
-        <tr>
-            <td>${cliente.nombre}</td>
-            <td>${cliente.identificacion}</td>
-            <td>${cliente.tipoPago}</td>
-            <td>${cliente.pagoPeaje}</td>
-            <td>${cliente.matricula}</td>
-            <td>${cliente.tipoVehiculo}</td>
-            <td>${cliente.fechaEntradaPeaje}</td>
-            <td>${cliente.horaEntradaPeaje}</td>    
-        </tr>
-    </c:forEach>
-    </center>
-</table>
+                    <table style="border-spacing: 15px; border-collapse: separate;display:  inline-table;">
+                        <center>
+                            <h2 class="section-heading text-uppercase">Lista</h2>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Identificacion</th>
+                                <th scope="col">Tipo de pago</th>
+                                <th scope="col">Pago Peaje</th>
+                                <th scope="col">Fecha Ingreso Peaje</th>
+                                <th scope="col">Hora Ingreso Peaje</th>
+                                
+
+                            </tr>
+                            <c:forEach items="${clientes}" var="cliente">
+                                <tr>
+                                    <td>${cliente.nombre}</td>
+                                    <td>${cliente.identificacion}</td>
+                                    <td>${cliente.tipoPago}</td>
+                                    <td>${cliente.pagoPeaje}</td>
+                                    <td>${cliente.fechaEntradaPeaje}</td>
+                                    <td>${cliente.horaEntradaPeaje}</td>    
+                                    </tr>
+                                </c:forEach>
+                                
+                            
+                        </center>
+                    </table>
+                    <table style="border-spacing: 15px; border-collapse: separate; display: inline-table;">
+                        <tr>
+                            <th scope="col">Matricula</th>
+                            <th scope="col">Tipo de Vehiculo</th>
+                        </tr>
+                        <tr>
+                            <c:forEach items="${vehiculos}" var="vehiculo">
+                                <tr>
+                                    <td>${vehiculo.matricula}</td>
+                                    <td>${vehiculo.tipoVehiculo}</td>
+                                       
+                                    </tr>
+                                </c:forEach>
+                        </tr>
+                    </table>
                 </div>
-                
+
 
             </div>
             <!-- END fh5co-page -->

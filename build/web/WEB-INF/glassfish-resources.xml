@@ -12,4 +12,5 @@
     </jdbc-connection-pool>
     <jdbc-resource enabled="true" jndi-name="java:app/BaseTrafficControl" object-type="user" pool-name="mysql_sql9207164_sql9207164Pool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/hola" object-type="user" pool-name="mysql_sql9207164_sql9207164Pool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/hola" object-type="user" pool-name="mysql_sql9207164_sql9207164Pool"/>
 </resources>

@@ -1,11 +1,9 @@
-package Control;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package Control;
 
 import Modelo.Cliente;
 import java.io.IOException;
@@ -24,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jairo
  */
-@WebServlet(name = "ListarClientes", urlPatterns = {"/lista"})
+@WebServlet(name="ListarClientes", urlPatterns = {"/ListarClientes"})
 public class ListarClientes extends HttpServlet {
 
     /**
@@ -50,16 +48,15 @@ public class ListarClientes extends HttpServlet {
     {
         EntityManager em;
         EntityManagerFactory emf;
-        emf=Persistence.createEntityManagerFactory("WebsitoPU");
+        emf=Persistence.createEntityManagerFactory("TrafficControl-WebPU");
         em=emf.createEntityManager();
         em.getTransaction().begin();
-        List<Cliente> clientes=em.createNamedQuery("Cliente.findAll").getResultList();
+        List<Cliente> clientes = em.createNamedQuery("Cliente.findAll").getResultList();
         em.getTransaction().commit();
         em.close();
         return clientes;
     
     }
-
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -60,8 +60,8 @@ public class Peaje {
         }
 
     }
-    public String getTipoPago() {
-        if(tipoPago == 1){
+    public String getTipoPago(String tipoPagoIngreso) {
+        if(tipoPagoIngreso.equals("1")){
             return "Efectivo";
         }else{
             return "FlyPass";
