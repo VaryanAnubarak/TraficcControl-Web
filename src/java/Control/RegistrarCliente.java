@@ -6,6 +6,7 @@
 package Control;
 
 import Modelo.Cliente;
+import Modelo.Peaje;
 import Modelo.Vehiculo;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -40,23 +41,27 @@ public class RegistrarCliente extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String identificacion = request.getParameter("identificacion");
         String tipoPagoStr = request.getParameter("tipoPago");
-        int tipoPago = 0;
-        if (tipoPagoStr != "" && !tipoPagoStr.equalsIgnoreCase(null)) {
-            tipoPago = Integer.parseInt(tipoPagoStr);
-        }
         String matricula = request.getParameter("matricula");
-        String tipoVehiculo = request.getParameter("tipoVehiculo");
-            Cliente cliente = new Cliente(0,nombre, identificacion, LocalDate.now().toString(), LocalTime.now().toString(), tipoPago, Integer.toString(3343));
+        String tipoVehiculo = request.getParameter("tipoVehiculo"); 
+            Peaje peaje = new Peaje();
+            Cliente cliente = new Cliente(0,nombre, identificacion, LocalDate.now().toString(), LocalTime.now().toString(), "1","2332");
+            
+ 
+       
+            
             Vehiculo vehiculo = new Vehiculo(0, matricula, tipoVehiculo);
-            cliente.setIdCliente(0);
+            
+            vehiculo.setIdVehiculo(0);  
+            
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("TrafficControl-WebPU");
             EntityManager em = emf.createEntityManager();
 
             em.getTransaction().begin();
 
-
+            
             em.persist(vehiculo);
             em.persist(cliente);
+            
             em.flush();
             em.getTransaction().commit();
 
