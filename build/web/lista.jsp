@@ -88,7 +88,7 @@
                                         <li>
                                             <a href="index.html">Home</a>
                                         </li>
-                                        <li><a href="registroVehiculos.html">Projects</a></li>
+                                        <li><a href="registroVehiculos.html">Registrar Vehiculo</a></li>
 
                                         <li><a class="active" href="ListaDB">Mostrar Listado de Vehiculos</a></li>
                                     </ul>

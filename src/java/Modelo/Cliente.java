@@ -65,9 +65,8 @@ public class Cliente implements Serializable {
     private String horaEntradaPeaje;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 2)
     @Column(name = "tipoPago")
-    private String tipoPago;
+    private int tipoPago;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 15)
@@ -81,7 +80,7 @@ public class Cliente implements Serializable {
         this.idCliente = idCliente;
     }
 
-    public Cliente(Integer idCliente, String nombre, String identificacion, String fechaEntradaPeaje, String horaEntradaPeaje, String tipoPago, String pagoPeaje) {
+    public Cliente(Integer idCliente, String nombre, String identificacion, String fechaEntradaPeaje, String horaEntradaPeaje, int tipoPago, String pagoPeaje) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -131,11 +130,11 @@ public class Cliente implements Serializable {
         this.horaEntradaPeaje = horaEntradaPeaje;
     }
 
-    public String getTipoPago() {
+    public int getTipoPago() {
         return tipoPago;
     }
 
-    public void setTipoPago(String tipoPago) {
+    public void setTipoPago(int tipoPago) {
         this.tipoPago = tipoPago;
     }
 
